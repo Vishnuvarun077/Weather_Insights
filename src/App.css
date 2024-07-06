@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  /* min-height: 100vh; */
+}
+
+body.dark-mode {
+  color: #f4f4f4;
+  background: linear-gradient(135deg, #2c3e50, #1a1a2e);
+}
+.weather-app {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(240, 240, 240, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: background-color 0.3s;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.weather-app.dark {
+  background-color: rgba(44, 44, 44, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark h1 {
+  color: #ecf0f1;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.search-form {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.search-form input {
+  flex-grow: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px 0 0 5px;
+  transition: all 0.3s ease;
+}
+
+.search-form input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.search-form button {
+  border-radius: 0 5px 5px 0;
+}
+
+.geo-button {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.current-weather, .forecast {
+  background-color: rgba(83, 198, 247, 0.6);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark .current-weather, .dark .forecast {
+  background-color: rgba(52, 73, 94, 0.8);
+}
+
+.temperature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.temperature img {
+  width: 100px;
+  height: 100px;
+  margin-right: 1rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.forecast h2 {
+  margin-bottom: 1rem;
+}
+
+.forecast-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.forecast-item {
+  text-align: center;
+  width: 18%;
+  background-color: rgba(83, 198, 247, 0.6);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.dark .forecast-item {
+  background-color: rgba(44, 44, 44, 0.6);
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.map-link, .forecast-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.map-link:hover, .forecast-link:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .weather-app {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-buttons {
+    margin-top: 1rem;
+  }
+
+  .forecast-item {
+    width: 48%;
+    margin-bottom: 1rem;
+  }
+}

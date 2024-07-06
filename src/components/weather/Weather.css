@@ -1,0 +1,60 @@
+Weather.css
+.weather-app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .weather-app.dark {
+    background-color: #333;
+    color: white;
+  }
+  
+  .search-form {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .search-form input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .current-weather, .forecast {
+    background-color: #15bab2;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .weather-app.dark .current-weather,
+  .weather-app.dark .forecast {
+    background-color: #444;
+  }
+  
+  .forecast-items {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .forecast-item {
+    text-align: center;
+  }
+  
+  .loading, .error {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .error {
+    color: red;
+  }
