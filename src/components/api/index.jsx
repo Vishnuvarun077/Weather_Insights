@@ -1,6 +1,6 @@
 // api.js
-// const API_KEY = "e34b4c51d8c2b7bf48d5217fe52ff79e";
-const API_KEY = "72fef618301507664f96fdb7a4a87417";
+
+// const API_KEY = "HeHeUseyourownapikeyfromaccuweather";
 const BASE_URL = "https://api.openweathermap.org/data/2.5";
 
 export async function fetchWeatherData(query, unit = "metric") {
