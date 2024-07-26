@@ -30,7 +30,8 @@ Weather Insights is a web application that provides real-time weather informatio
 
 - **Local Storage**:
   - Stores user preferences (selected unit and dark mode setting) in the browser's local storage.
--**You can find the hosted website on this link-` https://insightsofweather.netlify.app` **
+ - **You can find the hosted website on this link-` https://insightsofweather.netlify.app`**:
+
 ## Demo and Instructions
 
 1. **Clone the repository**:
